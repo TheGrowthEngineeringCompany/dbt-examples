@@ -1,0 +1,4 @@
+id,plan_name,created_at,status,data_custom_workspaceid
+sp1,Business,6/12/2023 14:58:30,churned,w0001
+sp2,Business,8/13/2023 11:58:30,active,w0002
+sp3,Business,8/14/2023 11:58:30,active,w0001
