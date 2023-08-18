@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: stg___customer___dbt_reconfigured__jaffle_orders
+    description: "Collector model for Entity: Customer from source: dbt_reconfigured
+      - jaffle_orders"
+    columns:
+      - name: ___hash
+        description: MD5 of the row
+        tests:
+          - not_null
+          - unique
+      - name: ___as_of
+        description: Best guestimate on since when this row is true
+        tests: []
+      - name: ___source
+        description: Source from which this row comes from
+        tests:
+          - not_null
+      - name: ___source_id
+        description: Id of the object in the Source from which this row came from
+        tests:
+          - not_null
+      - name: ___created_at
+        description: Creation time of the object in the Source from which this row came from
+        tests: []
+      - name: ___updated_at
+        description: Time when the object was updated in the Source from which this row
+          came from
+        tests: []
+      - name: ___loaded_at
+        description: Time when this object was loaded from the Source system
+        tests: []
+      - name: ___deleted_at
+        description: Time when this object was deleted from the Source system
+        tests: []
+      - name: customer_id
+        description: ""
+        tests: []
+      - name: total_orders
+        description: ""
+        tests: []
+    config:
+      materialized: table
+      schema: stg
+    meta:
+      reconf:
+        dagId: c20737a743403716870401ef33983381
+        generationId: 8f84211d7b30e180cd90ca2f99c7095e

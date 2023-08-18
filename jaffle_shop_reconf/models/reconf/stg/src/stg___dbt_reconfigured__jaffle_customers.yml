@@ -1,0 +1,44 @@
+version: 2
+models:
+  - name: stg___dbt_reconfigured__jaffle_customers
+    description: "Project model from source: dbt_reconfigured - jaffle_customers"
+    columns:
+      - name: ___source
+        description: Source from which this row comes from
+        tests:
+          - not_null
+      - name: ___source_id
+        description: Id of the object in the Source from which this row came from
+        tests:
+          - not_null
+      - name: ___created_at
+        description: Creation time of the object in the Source from which this row came from
+        tests: []
+      - name: ___updated_at
+        description: Time when the object was updated in the Source from which this row
+          came from
+        tests: []
+      - name: ___loaded_at
+        description: Time when this object was loaded from the Source system
+        tests: []
+      - name: ___deleted_at
+        description: Time when this object was deleted from the Source system
+        tests: []
+      - name: ___as_of
+        description: Best guestimate on since when this row is true
+        tests: []
+      - name: customer_id
+        description: "Projection for the column Customer Id in the context of source:
+          dbt_reconfigured - jaffle_customers"
+        tests: []
+      - name: full_name
+        description: "Projection for the column Full Name in the context of source:
+          dbt_reconfigured - jaffle_customers"
+        tests: []
+    config:
+      materialized: view
+      schema: stg
+    meta:
+      reconf:
+        dagId: e4223c3ce6c9f8c3962adf445551a976
+        generationId: 8f84211d7b30e180cd90ca2f99c7095e

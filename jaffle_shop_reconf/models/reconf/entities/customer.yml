@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: customer
+    description: Our unified definition of a customer entity
+    columns:
+      - name: customer_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: full_name
+        description: ""
+        tests: []
+      - name: total_orders
+        description: ""
+        tests: []
+    config:
+      materialized: table
+      schema: entities
+    meta:
+      reconf:
+        dagId: 2a5d23f72b8b6927c79704c173d4ebc5
+        generationId: 8f84211d7b30e180cd90ca2f99c7095e
